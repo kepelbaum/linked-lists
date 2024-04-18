@@ -18,7 +18,10 @@ function LinkedList() {
         list.unshift(x);
     }
     let size = () => list.length;
-    return {list, getList, append, prepend, size};
+    let head = () => list[0];
+    let tail = () => list[list.length - 1];
+    let at = (index) => list[index];
+    return {list, getList, append, prepend, size, head, tail, at};
 }
 
 function Node() {
@@ -36,4 +39,5 @@ main.append(4);
 main.append(10);
 main.prepend(2);
 console.log(main.getList()[0].getValue(), main.getList()[0].getNext(), main.getList()[1].getValue(), main.getList()[1].getNext());
-console.log(main.size());
+console.log(main.size(), main.head().getValue(), main.tail().getValue());
+console.log(main.at(1).getValue());
