@@ -1,1 +1,1 @@
-# linked-lists
+A simple linked lists factory.
